@@ -1,0 +1,56 @@
+{
+    "name": "Rust and Next.js",
+    "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "rust-lang.rust-analyzer",
+                "esbenp.prettier-vscode",
+                "dbaeumer.vscode-eslint",
+                "bradlc.vscode-tailwindcss",
+                "formulahendry.auto-rename-tag",
+                "csstools.postcss",
+                "ms-vscode.vscode-typescript-next",
+                "dsznajder.es7-react-js-snippets",
+                "christian-kohler.path-intellisense"
+            ],
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash",
+                "editor.formatOnSave": true,
+                "[typescript]": {
+                    "editor.defaultFormatter": "vscode.typescript-language-features"
+                },
+                "[javascript]": {
+                    "editor.defaultFormatter": "vscode.typescript-language-features"
+                },
+                "[typescriptreact]": {
+                    "editor.defaultFormatter": "vscode.typescript-language-features"
+                },
+                "[javascriptreact]": {
+                    "editor.defaultFormatter": "vscode.typescript-language-features"
+                },
+                "[json]": {
+                    "editor.defaultFormatter": "vscode.json-language-features"
+                },
+                "[css]": {
+                    "editor.defaultFormatter": "vscode.css-language-features"
+                },
+                "editor.codeActionsOnSave": {
+                    "source.fixAll": "explicit"
+                },
+                "typescript.tsdk": "node_modules/typescript/lib"
+            }
+        }   
+    },
+    "forwardPorts": [3000],
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+    "workspaceFolder": "/workspace",
+    "onCreateCommand": "curl https://sh.rustup.rs -sSf | sh -s -- -y && . ~/.bashrc",
+    // "remoteEnv": { "PATH": "${containerEnv:PATH}:${containerEnv:HOME}/.cargo/bin" },
+    // "postCreateCommand": ". '/home/node/.cargo/env' && npm install",
+    "postCreateCommand": "npm install",
+    "remoteUser": "node"
+}

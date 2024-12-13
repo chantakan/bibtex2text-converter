@@ -1,6 +1,6 @@
 # Project Setup
 
-This project provides a development environment using Next.js and Rust. Next.js is located in the project root directory, and Rust is in the `bibliography-parser/` directory.
+This project provides a development environment using Next.js and Rust. Next.js is located in the project root directory, and Rust is in the `bibliography-parser/` directory to use as a wasm.
 
 ## Setting Up the Development Environment
 
@@ -17,7 +17,7 @@ This project uses VS Code Dev Containers to set up the development environment. 
 1. Clone the repository.
 
     ```sh
-    git clone https://github.com/your-repo/bibtex-converter.git
+    git clone https://github.com/chantakan/bibtex2text-converter.git
     cd bibtex-converter
     ```
 
@@ -53,6 +53,8 @@ npm start
 ```
 
 ## Rust Development
+*We are currently unsure of the implementation of WASM in TURBOPACK, so the application of this one has not yet been determined.
+
 
 For Rust development, navigate to the bibliography-parser/ directory.
 

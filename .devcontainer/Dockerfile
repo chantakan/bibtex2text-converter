@@ -2,7 +2,7 @@ FROM node:lts-slim
 
 # 必要最小限のパッケージのみインストール
 RUN apt-get update && apt-get install -y \
-    git curl \
+    git curl build-essential \
     && rm -rf /var/lib/apt/lists/* \
 
 # ワークスペースディレクトリを作成

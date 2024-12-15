@@ -1,8 +1,16 @@
-# Project Setup
+# Bibletex to reference list
+
+Drop or fill in a biblatx or yaml file and select a citation style, and a list of references will be displayed.This is good to use when you want to use only the list of references when creating slides, etc.
+The site for the demo is at [https://bib.tompython.com/](https://bib.tompython.com/).
+
+![image](https://github.com/user-attachments/assets/6b632679-5d83-42f2-9408-b9b04b1b3deb)
+
+
+## Project Setup
 
 This project provides a development environment using Next.js and Rust. Next.js is located in the project root directory, and Rust is in the `bibliography-parser/` directory to use as a wasm.
 
-## Setting Up the Development Environment
+### Setting Up the Development Environment
 
 This project uses VS Code Dev Containers to set up the development environment. Please follow these steps.
 
